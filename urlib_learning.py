@@ -1,23 +1,26 @@
 from urllib2 import Request, urlopen, URLError, HTTPError
 
 req = Request('http://bbs.csdn.net/callmewhy')
+  
+try:  
+  
+    response = urlopen(req)  
+  
+except URLError, e:  
 
-try:
+    if hasattr(e, 'code'):  
+  
+        print 'The server couldn\'t fulfill the request.'  
+  
+        print 'Error code: ', e.code  
 
-    response = urlopen(req)
-
-except HTTPError, e:
-
-    print 'The server couldn\'t fulfill the request.'
-
-    print 'Error code: ', e.code
-
-except URLError, e:
-
-    print 'We failed to reach a server.'
-
-    print 'Reason: ', e.reason
-
-else:
-    print 'No exception was raised.'
-    # everything is fine
+    elif hasattr(e, 'reason'):  
+  
+        print 'We failed to reach a server.'  
+  
+        print 'Reason: ', e.reason  
+  
+  
+else:  
+    print 'No exception was raised.'  
+    # everything is fine  
