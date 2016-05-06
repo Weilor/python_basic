@@ -1,5 +1,3 @@
-__author__ = '绍文'
-
 from email.mime.text import MIMEText
 
 
