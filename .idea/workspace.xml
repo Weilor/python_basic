@@ -75,7 +75,7 @@
       <file leaf-file-name="random.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/random.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.94722223" vertical-offset="553" max-vertical-offset="1349">
+            <state vertical-scroll-proportion="0.9485396" vertical-offset="553" max-vertical-offset="1349">
               <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
               <folding />
             </state>
@@ -399,7 +399,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1552" height="880" extended-state="6" />
+    <frame x="-8" y="-8" width="1552" height="880" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -536,7 +536,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/random.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94722223" vertical-offset="553" max-vertical-offset="1349">
+        <state vertical-scroll-proportion="0.9485396" vertical-offset="553" max-vertical-offset="1349">
           <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
           <folding />
         </state>
