@@ -1,17 +1,63 @@
-from email.mime.text import MIMEText
+__author__ = '绍文'
 
 
-# 输入Email地址和口令:
-from_addr = raw_input('From: ')
-password = raw_input('Password: ')
-# 输入SMTP服务器地址:
-smtp_server = raw_input('SMTP server: ')
-# 输入收件人地址:
-to_addr = raw_input('To: ')
+import Image, ImageDraw, ImageFont, ImageFilter
+import random
 
-import smtplib
-server = smtplib.SMTP(smtp_server, 25) # SMTP协议默认端口是25
-server.set_debuglevel(1)
-server.login(from_addr, password)
-server.sendmail(from_addr, [to_addr], msg.as_string())
-server.quit()
+# 随机字母:
+def rndChar():
+    return chr(random.randint(65, 90))
+
+# 随机颜色1:
+def rndColor():
+    return (random.randint(64, 255), random.randint(64, 255), random.randint(64, 255))
+
+# 随机颜色2:
+def rndColor2():
+    return (random.randint(32, 127), random.randint(32, 127), random.randint(32, 127))
+
+# 240 x 60:
+width = 60 * 4
+height = 60
+image = Image.new('RGB', (width, height), (255, 255, 255))
+# 创建Font对象:
+font = ImageFont.truetype('Arial.ttf', 36)
+# 创建Draw对象:
+draw = ImageDraw.Draw(image)
+# 填充每个像素:
+for x in range(width):
+    for y in range(height):
+        draw.point((x, y), fill=rndColor())
+# 输出文字:
+for t in range(4):
+    draw.text((60 * t + 10, 10), rndChar(), font=font, fill=rndColor2())
+# 模糊:
+image = image.filter(ImageFilter.BLUR)
+image.save('code.jpg', 'jpeg');
+
+from urllib2 import Request, urlopen, URLError, HTTPError
+
+req = Request('http://bbs.csdn.net/callmewhy')
+  
+try:  
+  
+    response = urlopen(req)  
+  
+except URLError, e:  
+
+    if hasattr(e, 'code'):  
+  
+        print 'The server couldn\'t fulfill the request.'  
+  
+        print 'Error code: ', e.code  
+
+    elif hasattr(e, 'reason'):  
+  
+        print 'We failed to reach a server.'  
+  
+        print 'Reason: ', e.reason  
+  
+  
+else:  
+    print 'No exception was raised.'  
+    # everything is fine  
